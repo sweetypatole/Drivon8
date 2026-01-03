@@ -26,13 +26,7 @@ Three.js – 3D rendering and scene management
 GLTF Loader – Loading and managing 3D car and wheel models
 Web Audio  – Playing and controlling engine sound effects
 
-How to Run the Project
-Clone the repository:
-git clone https://github.com/sweetypatole/Driveon.git
-Open the project folder.
-Open index.html in any modern web browser
-(Chrome / Edge recommended).
-⚠️ Note: For best performance, ensure all 3D models and sound files are correctly placed in their respective folders.
+
 
 Key Learnings
 Working with 3D scenes, cameras, lights, and models in Three.js
