@@ -1,0 +1,568 @@
+
+        
+        :root {
+            --black: #0e0e0e;
+            --dark-grey: #1a1a1a;
+            --mid-grey: #2b2b2b;
+            --light-grey: #bbbbbb;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--black);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--white);
+        }
+
+        /* HERO SECTION */
+        .auto-hero {
+            position: relative;
+            height: 90vh;
+            overflow: hidden;
+        }
+
+        .auto-hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            bottom: 40px;
+            left: 50px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            margin: 0;
+        }
+
+        .hero-text p {
+            font-size: 22px;
+            margin-top: 5px;
+        }
+
+        /* QUOTE */
+        .auto-quote {
+            padding: 40px;
+            background-color: var(--dark-grey);
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* INTRO SECTION */
+        .auto-intro {
+            padding: 40px;
+            background-color: var(--mid-grey);
+            text-align: center;
+        }
+
+        .auto-intro h2 {
+            font-size: 32px;
+        }
+
+        .auto-intro p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+
+        /* INFO + VIDEO */
+        .auto-info {
+            display: flex;
+            padding: 50px;
+            gap: 40px;
+            flex-wrap: wrap;
+            background-color: var(--dark-grey);
+        }
+
+        .info-text {
+            flex: 1 1 45%;
+        }
+
+        .info-text h2 {
+            font-size: 28px;
+        }
+
+        .info-text ul {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        .info-video {
+            flex: 1 1 45%;
+        }
+
+        .info-video video {
+            width: 100%;
+            height: 300px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+
+/* how auto works */
+
+        .info-text {
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("./autocar\ inter.jpg") center/cover no-repeat;
+
+    color: white;
+    padding: 50px;
+    border-radius: 16px;
+}
+
+.info-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.info-text p,
+.info-text li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+        /* TYPES SECTION */
+        .auto-types {
+            padding: 40px;
+        }
+
+        .auto-types h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .type-card {
+            background-color: var(--dark-grey);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00eaff;
+            border-radius: 5px;
+        }
+        .auto-type-card {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    margin: 30px auto;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+/* Dark overlay */
+.auto-type-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* Text styling */
+.type-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+}
+
+.type-content h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.type-content ul {
+    padding-left: 18px;
+    margin: 10px 0;
+}
+
+.type-content li {
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+/* ---- Set your background image here ---- */
+.amt-card {
+    background-image: url("./skoda.jpg"); /* replace with your image */
+}
+
+
+.auto-type-card {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    margin: 30px 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* Dark overlay */
+.auto-type-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* TEXT MOVED TO BOTTOM-LEFT */
+.type-content {
+    position: absolute;
+    bottom: 20px;   /* move to bottom */
+    left: 20px;     /* align to left */
+    color: white;
+    z-index: 2;
+    width: 90%;
+}
+
+.type-content h3 {
+    margin: 0 0 10px;
+    font-size: 26px;
+}
+
+.type-content p {
+    margin: 0 0 10px;
+}
+
+.type-content ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+/* Background Image for CVT Card */
+.cvt-card {
+    background-image: url("https://media.istockphoto.com/id/2214954746/photo/generic-modern-car.jpg?s=1024x1024&w=is&k=20&c=PtXY2x9zZ3SaLWCrT5AJHmOlz7KMhn9mJN5y2ywNv6Y="); /* change to your image */
+}
+
+
+/* DCT/DSG Card Background */
+.dct-card {
+    background-image: url("./auto\ bmw.jpg"); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay same as other cards */
+.dct-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.dct-card .type-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: white;
+}
+/* TORQUE CONVERTER CARD BACKGROUND */
+.torque-card {
+    background-image: url("https://images.unsplash.com/photo-1670054953044-2605dbd0d747?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay */
+.torque-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* Bottom-left text */
+.torque-card .type-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: white;
+}
+
+
+
+        /* DIFFERENCE TABLE */
+        .difference-cards-section {
+    padding: 60px 20px;
+    background: #111; /* dark background */
+    color: #fff;
+    text-align: center;
+}
+
+.difference-cards-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ff4c29;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-card {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 16px;
+    padding: 25px 20px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 76, 41, 0.4);
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff6600;
+}
+
+.feature-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.feature-card span.auto {
+    font-weight: 600;
+    color: #00bfff;
+}
+
+.feature-card span.electric {
+    font-weight: 600;
+    color: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+        /* .difference-section {
+            padding: 40px;
+        }
+
+        table {
+            width: 100%;
+            background-color: var(--dark-grey);
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* ADVANTAGES */
+        .advantages {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    text-align: center;
+}
+
+.advantages h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ff4c29;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.advantages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.adv-card {
+    background: #111;
+    border-radius: 16px;
+    padding: 25px 20px;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 76, 41, 0.5);
+    border-color: #ff4c29;
+}
+
+.adv-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #ff6600, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.adv-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .advantages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+        /* .advantages {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .advantages li {
+            font-size: 18px;
+            line-height: 2;
+        } */ 
+         
+
+        /* FOOTER */
+        .auto-footer {
+          
+            background-color: var(--mid-grey);
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .text-deco{
+            list-style: none;
+        }
+
+
+        .electric-why {
+    background-color: #222;
+    padding: 50px 30px;
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    margin: 60px auto;
+    width: 85%;
+}
+
+.electric-why h2 {
+    font-size: 2.5rem;
+    color: white; /* electric green glow */
+    margin-bottom: 20px;
+}
+
+.why-intro {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.why-list li {
+    background: rgba(255, 255, 255, 0.06);
+    margin: 12px 0;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    border-left: 4px solid  #ff6600; 
+    transition: 0.3s ease;
+}
+
+.why-list li:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(5px);
+}
+
+
+
+
+.footer {
+    background: #111;
+    color: #eee;
+    padding: 90px 20px 60px;   /* BIG FOOTER */
+    box-shadow: 0 -10px 30px rgba(255, 76, 41, 0.12);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #ff4c29;
+    font-size: 22px;
+}
+
+.footer-section p {
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: #eee;
+    margin-right: 18px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4c29;
+    transform: scale(1.15);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+    padding-top: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+    

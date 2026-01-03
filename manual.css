@@ -1,0 +1,527 @@
+
+.manual-quote h2{
+    font-size: 66px;
+    font-weight: 800;
+    margin-top: 100px;
+    /* color: whitesmoke; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.manual-quote p {
+    margin-top: -40px;
+    font-weight: 525;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent{
+    margin-top:100px;
+    height: 400px;
+    width: 600px;
+    background-color:lab(29.67% 1.68 0.6);
+
+}
+#heading{
+   
+    font-size:40px;
+    padding-top: 40px ;
+    font-weight: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.manual-quote{
+    color: white;
+    background-color: #333333;
+    
+}
+#para{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    font-size: 25px;
+    padding-top: 20px;
+    font-weight: 400;
+}
+
+.mid-part{
+    color: white;
+    background-color:  #333333;
+    height: 280px;
+}
+.asidevideo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 600px;
+    margin-top: -400px;
+    background-color: red;
+    height: 400px;
+    width: 730px;
+}
+.asidevideo {
+    width: 730px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px; /* optional smooth edges */
+    position: relative;
+}
+
+.asidevideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures video fills the div */
+    display: block;
+}
+/* .mid-part{
+    
+} */
+#heading_manual{
+    font-size: 50px;
+    font-weight: 800;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#heading_manual_para {
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cat1{
+    height: 340px;
+    width: 500px;
+    overflow: hidden; /* Important: hides extra zoomed video edges */
+    border-radius: 10px; /* optional for smooth corners */
+    background-color: #333333;
+}
+
+.cat1 video{
+    height: 500px;
+    width: 500px;
+    object-fit: contain; /* This makes it perfectly fill the box */
+    rotate: 270deg;
+    padding: 0px 20px 20px 10px;
+    margin-top: -95px;
+}
+.main_cont{
+    background-color: #333333;
+}
+/* .cat1 {
+    animation: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+} */
+/* @keyframes move{
+    form{
+
+    }
+    to
+    {
+        transform:translateX(200px) ;
+    }
+} */
+.cat1_description{
+    color: white;
+    height: 340px;
+    width: 750px;
+    background-color: #333333;
+    margin-left: 580px;
+    margin-top: -370px;
+    border-radius: 10px;
+}
+#h1{
+    font-size: 40px;
+    font-weight: 500px;
+
+}
+#p1{
+    font-size: 28px;
+    font-weight: 800px;
+    /* background-color: darkgrey; */
+}
+.sedan-card {
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+    /* background-image: url("./carvedio/image.webp"); ← replace with your image name */
+        background-image: url("https://bmw.scene7.com/is/image/BMW/MY26-330iB_Regional_EcoRoad_Shot01_Skyscraper_v001b-EXTENDED:3to1?fmt=webp&wid=1504&hei=501"); /* ← replace with your image name */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay to make text readable */
+.sedan-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); /* adjust darkness if needed */
+}
+
+/* Text Area */
+.sedan-content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    z-index: 2;
+}
+
+.sedan-content h2 {
+    margin: 0 0 8px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.sedan-content p {
+    margin: 0 0 10px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.sedan-content ul li {
+    font-size: 20px;
+    line-height: 1.4;
+}
+.suv-card {
+    margin-top: 100px;
+    width: 100%;
+    height: 380px;
+    background-image:url("https://images.pexels.com/photos/14550540/pexels-photo-14550540.jpeg"); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Overlay for better text contrast */
+.suv-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+}
+
+/* Text block */
+.suv-content {
+    position: absolute;
+    bottom: 28px;
+    left: 25px;
+    color: #fff;
+    z-index: 2;
+}
+
+.suv-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.suv-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.suv-content ul li {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.suv-content p {
+    font-size: 19px;
+    opacity: 0.9;
+}
+.sports-card {
+    margin-top: 100px;
+    width: 100%;
+    height: 391px;
+    background-image: url("SPORTS.jpg"); /* replace with your chosen image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.5);
+}
+
+.sports-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+}
+
+.sports-content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #fff;
+    z-index: 2;
+}
+
+.sports-content h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color:  white  /*sporty red accent */
+}
+
+.sports-content p {
+    font-size: 28px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.sports-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.sports-content ul li {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+.offroad-card {
+    margin-top: 100px;
+    width: 100%;
+    height: 400px;
+    background-image: url("defender.jpg"); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Add an earthy overlay for readability */
+.offroad-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+}
+
+/* Text styles */
+.offroad-content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #fff;
+    z-index: 2;
+}
+
+.offroad-content h2 {
+    font-size:  40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #f5b041; /* earthy gold accent */
+}
+
+.offroad-content p {
+    font-size: 28px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.offroad-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.offroad-content ul li {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+/* advantages of manual */
+.advantages {
+  margin-top: 100px;  
+  text-align: center;
+  padding: 60px 20px;
+  background:  #383838;/*linear-gradient(135deg, #0a0a0a, #1a1a1a);*/
+  color: white;
+}
+
+.advantages h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.adv-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.adv-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  width: 220px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.adv-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* why manual section */
+.manual-adv {
+  text-align: center;
+  padding: 40px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  width: 80%;
+  margin: 40px auto;
+}
+.manual-adv h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+.manual-adv ul {
+  list-style: none;
+  padding: 0;
+}
+.manual-adv li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+
+
+
+.footer {
+    background: #111;
+    color: #eee;
+    padding: 90px 20px 60px;   /* BIG FOOTER */
+    box-shadow: 0 -10px 30px rgba(255, 76, 41, 0.12);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #ff4c29;
+    font-size: 22px;
+}
+
+.footer-section p {
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: #eee;
+    margin-right: 18px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4c29;
+    transform: scale(1.15);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+    padding-top: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+
+/*  */
+/* ===== Make full page background deep black except manual_drive_section ===== */
+body {
+    background-color: #0e0e0e; /* deep black shade for entire page */
+}
+
+/* Hero video overlay for better text readability */
+.back_video {
+    filter: brightness(0.35); /* darkens video background */
+}
+
+/* Exclude .manual_drive_section from background darkening */
+.manual_drive_section {
+    background: none; /* keeps its original styling/colors */
+}
+
+/* Mid-part background */
+.mid-part {
+    background-color: #111; /* deep black */
+}
+
+/* Main container for categories */
+.main_cont {
+    background-color: #0f0f0f; /* deep black */
+}
+
+/* Cat1 description */
+.cat1_description {
+    background-color: rgba(17,17,17,0.95); /* slightly translucent black */
+}
+
+/* Advantages section */
+.advantages {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a); /* dark stylish gradient */
+}
+
+/* Why manual section */
+.manual-adv {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)); /* deep black overlay */
+}
+
+/* Cards (Sedan, SUV, Sports, Offroad) darker overlay for consistency */
+.sedan-card::before,
+.suv-card::before,
+.sports-card::before,
+.offroad-card::before {
+    background: rgba(0,0,0,0.6); /* slightly darker overlay */
+}
+
+
+
+

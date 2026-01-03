@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car modification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="./style.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Keep your existing styles here */
+        .action-box {
+            width: 100%;
+            background: #0f0f0f;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .action-inner { display: flex; gap: 25px; }
+        .original-btn {
+            padding: 12px 28px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 30px;
+            border: none;
+            background: #ffffff;
+            transition: 0.3s;
+        }
+        .original-btn:hover { transform: scale(1.05); opacity: 0.9; }
+        .carousel-heading { padding: 50px 0 20px 0; text-align: center; }
+        .carousel-text { max-width: 800px; margin: auto; }
+        .carousel-title { font-size: 40px; font-weight: 700; letter-spacing: 1px; color: #fff; text-transform: uppercase; padding-bottom: 10px; }
+        .carousel-subtitle { font-size: 20px; color: #ccc; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<!-- home page -->
+<video autoplay loop muted playsinline height="100%" width="100%" class="back_video">
+    <source src="./carvedio/background video 7.mp4" type="video/mp4">  
+</video> 
+
+<!-- Navbar -->
+<div id="navbar">
+    <a id="logo" href="#">logo</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#customize">Customize</a>
+    <a href="#login">Login</a>
+    <div class="drivon-container"></div>
+</div>  
+
+<!-- Home Section -->
+<section id="home">
+    <div class="quote">
+        <h1 id="quote1">"Fuel the Passion. Drive the Future."</h1>
+    </div>
+    <div class="subquote">
+        <h2>“Customize, Explore, and Showcase Your Dream Car.”</h2>
+    </div>
+</section>
+
+<!-- Action Buttons Section -->
+<section class="action-box" id="customize">
+  <div class="action-inner">
+    <a href="#start-modify"><button class="original-btn">Start Customizing</button></a>
+    <a href="#garage"><button class="original-btn">Explore Garage</button></a>
+  </div>
+</section>
+
+<!-- Carousel Heading Section -->
+<section class="carousel-heading" id="about">
+  <div class="carousel-text">
+    <h2 class="carousel-title">Explore Iconic Machines</h2>
+    <p class="carousel-subtitle">Take a 360° tour of legendary rides built for speed and passion.</p>
+  </div>
+</section>
+
+<!-- Carousel Section -->
+<section class="carousel" id="gallery">
+    <div class="box">
+        <span style="--i: 1"><img src="https://tse2.mm.bing.net/th/id/OIP.wGVME0Cb58MSmUQRL_aBTQHaEK?pid=Api&P=0&h=180" alt="" height="40px"></span>
+        <span style="--i: 2"><img src="https://tse2.mm.bing.net/th/id/OIP._VGFuQmtI26iLdtiEjtX8AHaE7?pid=Api&P=0&h=180" alt=""></span>
+        <span style="--i: 3"><img src="https://tse2.mm.bing.net/th/id/OIP.TMFShV3L5W-OhUsSN8czJgHaEK?pid=Api&P=0&h=180" alt=""></span>
+        <span style="--i: 4"><img src="https://tse4.mm.bing.net/th/id/OIP.T9v1q9dzmahlvrK5vNCg3AHaEo?pid=Api&P=0&h=180" alt=""></span>
+        <span style="--i: 5"><img src="https://tse1.mm.bing.net/th/id/OIP.8lRFxO_bHs7Qy-nE0_LgxwHaEK?pid=Api&P=0&h=180" alt=""></span>
+        <span style="--i: 6"><img src="https://tse1.mm.bing.net/th/id/OIP.MeFfqXzUT9cOAnf2IJcMKAHaEK?pid=Api&P=0&h=180" alt=""></span>
+        <span style="--i: 7"><img src="https://tse4.mm.bing.net/th/id/OIP.h48ddGzzvI35oYdzrHdmBgHaEK?pid=Api&P=0&h=180" alt=""></span>
+        <span style="--i: 8"><img src="https://tse2.mm.bing.net/th/id/OIP.GaoHDSRd4FTZWa0LcF5_aAHaFW?pid=Api&P=0&h=180" alt=""></span>
+    </div>
+</section>
+
+<!-- Transform Your Ride Section -->
+<section class="parent" id="garage">
+  <div class="child1">
+    <h1 id="heading">Transform Your Ride</h1>
+    <p>Watch cars come to life with stunning modifications. From wheels to wraps, unleash your creativity and design the car of your dreams.</p>
+    <p>Step into the future of car customization. Modify every detail in real time— from sleek colors to powerful wheels, and create a ride that turns heads.</p>
+    <ul>
+      <li>Choose custom colors</li>
+      <li>Swap wheels instantly</li>
+      <li>Set the perfect background</li>
+      <li>Save and share your build</li>
+    </ul>
+    <div id="start-modify">
+        <button><a href="pract.html">Start Customizing</a></button>
+    </div>
+  </div>
+  <div class="child2">
+    <div class="car-custom-video">
+      <video autoplay muted loop playsinline>
+        <source src="./carvedio/car custom.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- Cards Section -->
+<section class="cards">
+  <div class="card1" style="width: 18rem;">
+    <img src="https://cdn.pixabay.com/photo/2023/07/29/16/42/car-8157299_960_720.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Manual</h5>
+      <p class="card-text">Experience full control with a classic manual drive.</p>
+      <a href="./manual.html" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+  <div class="card2" style="width: 18rem;">
+    <img src="https://media.istockphoto.com/id/1498842894/photo/electric-cars-charging-at-the-charging-station-and-with-a-wind-turbine-background-electric.jpg?s=1024x1024&w=is&k=20&c=rFvjcLD-UTCW1ckjnczlNDdNd8W-97TTLBEdG6-q8Q0=" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Electric</h5>
+      <p class="card-text">Drive into the future with clean electric power.</p>
+      <a href="electric1.html" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+  <div class="card3" style="width: 18rem;">
+    <img src="https://cdn.pixabay.com/photo/2023/01/24/10/30/gearstick-7740670_1280.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Automatic</h5>
+      <p class="card-text">Enjoy effortless driving with smooth automatic shifts</p>
+      <a href="automatic.html" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We create innovative car customization tools that make modifying cars fun, simple, and interactive.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: patolesweety@gmail.com</p>
+            <p>Phone: +91 7499850532</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sweety-patole-a9ba29259/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2025 DrivOn Car Customization Project — All Rights Reserved</div>
+</footer>
+
+<script type="module" src="./car.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

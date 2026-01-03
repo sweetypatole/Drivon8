@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./pract.css">
+</head>
+<body>
+    <!-- <div id="main">
+        <div id="center">
+            <div class="text">
+                <h1>BMW</h1>
+                <h1>oddi</h1>
+                <h1>lambo</h1>
+            </div>
+            <div id="one" class="imagecontainer">
+                <img src="https://images.unsplash.com/photo-1516610540415-d1b25463c7f3?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div id="" class="imagecontainer">
+                <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div class="imagecontainer">
+                <img src="https://images.unsplash.com/photo-1630312465536-5c6b1f76dc3f?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>     
+        </div>
+    </div>
+    <div id="box">
+
+    </div> -->
+
+<h1>Customize your dream car</h1>
+
+   
+
+
+    <div class="slider">
+    <div id="dCanvas"></div>
+
+
+        <!-- <h1>Customize your dream car</h1> -->
+  </div>
+  <div style="position:absolute; top:100px; left:12px; z-index:100; background:#fff; padding:8px; border-radius:6px;">
+  <label>Pick Car Color:</label>
+  <input type="color" id="colorPicker" value="#ff0000">
+</div>
+<!-- <input type="color" id="colorPicker"> -->
+
+<select id="modelSelect">
+  <option value="">Select Your Car</option>
+  <option value="lambo">Lamborghini</option>
+  <option value="bmw i8">bmw i8</option>
+  <option value="ferrari">Ferrari</option>
+  <option value="bmw">bmw i8 xs</option>
+</select>
+
+
+<!-- Wheels Section -->
+<div class="wheels">
+ <label for="wheelSelect">Choose Wheels:</label>
+<select id="wheelSelect">
+  <option value="">Select</option>
+  <option value="wheel1">Wheel Style 1</option>
+  <option value="wheel2">Wheel Style 2</option>
+  <option value="wheel3">Wheel Style 3</option>
+</select>
+<button id="addWheelBtn">Add Wheels</button>
+<button id="removeWheelBtn">Remove Wheels</button>
+
+</div>
+<br><br>
+
+<!-- Spoiler Section -->
+<div class="spoiler">
+    <label for="spoilerSelect">Choose Spoiler:</label>
+<select id="spoilerSelect">
+  <option value="">Select</option>
+  <option value="spoiler1">Spoiler 1</option>
+  <option value="spoiler2">Spoiler 2</option>
+</select>
+<button id="addSpoilerBtn">Add Spoiler</button>
+<button id="removeSpoilerBtn">Remove Spoiler</button>
+</div>
+<br><br><br>
+
+<!-- sound section -->
+<section class="sound-section">
+    <h2 class="sound-title">🔊 Experience Real Car Engine Sounds</h2>
+    <p class="sound-subtitle">Click a button to hear how different cars sound.</p>
+
+    <div class="sound-buttons">
+
+        <button class="sound-btn" onclick="playSound('sport')">
+            Sport Exhaust
+        </button>
+
+        <button class="sound-btn" onclick="playSound('turbo')">
+            Turbo Boost
+        </button>
+
+        <button class="sound-btn" onclick="playSound('electric')">
+            Electric Car Sound
+        </button>
+
+        <button class="sound-btn" onclick="playSound('startup')">
+            Engine Start-Up
+        </button>
+
+    </div>
+
+    <!-- Audio Files -->
+
+    <audio id="sport" src="sport car sound.mp3"></audio>
+    <audio id="turbo" src="turbo-flutter-336362.mp3"></audio> 
+    <audio id="electric" src="electric-car-393088.mp3"></audio> 
+    <audio id="startup" src="car-engine-372477.mp3"></audio>
+
+    <!-- <audio id="sport" src="sport car sound.mp3"></audio>
+    <audio id="turbo" src="turbo-flutter-336362.mp3"></audio>
+    <audio id="electric" src="electric-car-393088.mp3"></audio>
+    <audio id="startup" src="car-engine-372477.mp3"></audio> -->
+</section>
+
+
+   
+    <script type="module" src="./pract.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+ 
+  
+

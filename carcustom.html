@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Car modification</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap (CSS only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ---------- Reset ---------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root{
+      --black:#000000;
+      --dark-1:#0d0d0d;
+      --dark-2:#161616;
+      --accent:#ff4c29;
+      --muted:#bdbdbd;
+      --glass: rgba(255,255,255,0.06);
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background: var(--black);
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    /* ---------- background hero video ---------- */
+    .back_video {
+      position: fixed;
+      inset: 0;              /* top:0; right:0; bottom:0; left:0 */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* translucent overlay to make text readable */
+    .hero-overlay {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.6));
+      z-index: -1;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    #navbar{
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 64px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding: 0 28px;
+      z-index: 50; /* keep above video */
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    #navbar .nav-left { display:flex; align-items:center; gap:20px; }
+    #logo { color: var(--accent); font-weight:900; text-decoration:none; font-size:20px; }
+    #navbar .nav-links { display:flex; gap:16px; align-items:center; }
+    #navbar a { color: #ff7777; text-decoration:none; font-weight:700; padding:6px 10px; border-radius:6px; }
+    #navbar a:hover { color: #fff; background: rgba(255,255,255,0.02); }
+
+    /* ---------- HERO QUOTE ---------- */
+    .hero-quote {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      min-height:70vh;
+      padding: 80px 20px 40px;
+      gap:16px;
+    }
+
+    .hero-quote h1{
+      font-size: clamp(28px, 5vw, 54px);
+      font-weight:900;
+      letter-spacing: 1px;
+      color: #fff;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.6);
+    }
+
+    .hero-quote h2{
+      font-size: clamp(16px, 1.6vw, 22px);
+      font-weight:800;
+      color: var(--muted);
+    }
+
+    /* ---------- CTA buttons ---------- */
+    .buttons {
+      display:flex;
+      gap: 14px;
+      margin-top: 8px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .buttons .btn-cta {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight:700;
+      text-decoration:none;
+      transition: all .22s ease;
+    }
+
+    .buttons .btn-cta:hover { background: var(--accent); color:#000; transform: translateY(-3px); }
+
+    /* ---------- carousel heading ---------- */
+    .carousel-heading { padding: 40px 20px 10px; text-align:center; background: var(--dark-1); }
+    .carousel-heading h2 { color: #fff; font-size: 28px; margin-bottom:6px; }
+    .carousel-heading .sub-title { color: var(--muted); font-size:16px; font-weight:600; }
+
+    /* ---------- 3D rotating box (carousel) ---------- */
+    .carousel {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding: 40px 10px 70px;
+      background: var(--dark-2);
+    }
+
+    .box {
+      position: relative;
+      height: 220px;
+      width: 220px;
+      transform-style: preserve-3d;
+      animation: rotate 18s linear infinite;
+    }
+
+    @keyframes rotate { from{transform: perspective(1400px) rotateY(0);} to{transform: perspective(1400px) rotateY(360deg);} }
+
+    .box span {
+      position:absolute; inset:0;
+      transform-origin:center;
+      transform-style: preserve-3d;
+      /* translateZ is set inline via CSS variable --i in HTML */
+      -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, rgba(0,0,0,0.7));
+    }
+
+    .box span img{
+      width:100%; height:100%; object-fit:cover; border-radius:12px; border: 2px solid rgba(255,255,255,0.06);
+      transition: transform .35s ease;
+    }
+    .box span:hover img { transform: scale(1.15); z-index:10; }
+
+    /* ---------- parent section (customize) ---------- */
+    .parent{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      padding: 60px 28px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(10,10,10,0.7));
+    }
+
+    .child1, .child2 { flex:1 1 0; min-width:280px; }
+    .child1 { color:#fff; padding: 20px; }
+    .child1 #heading{ font-size: 34px; margin-bottom:12px; }
+    .child1 p { color: var(--muted); margin-bottom:12px; }
+
+    .child1 ul { margin-top:12px; list-style: none; padding-left: 0; color: var(--muted); }
+    .child1 ul li { margin:8px 0; padding-left: 12px; position: relative; }
+    .child1 ul li::before { content: "•"; position: absolute; left: -12px; color: var(--accent); }
+
+    #start-modify { margin-top:18px; }
+    #start-modify a { text-decoration:none; color:#fff; display:inline-block; background:var(--accent); padding:10px 16px; border-radius:8px; font-weight:700; }
+
+    .car-custom-video { display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:12px; }
+    .car-custom-video video{ width:100%; max-width:700px; height:420px; object-fit:cover; border-radius:12px; box-shadow: 0 12px 30px rgba(0,0,0,0.6); }
+
+    /* ---------- cards row ---------- */
+    .cards { display:flex; gap:20px; justify-content:center; align-items:flex-start; padding:40px 20px; background: var(--dark-2); flex-wrap:wrap; }
+    .cards .card { width:300px; background: #111; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.04); transition: transform .2s ease, box-shadow .2s ease; }
+    .cards .card img { width:100%; height:180px; object-fit:cover; display:block; }
+    .cards .card-body { padding:16px; background: #0b0b0b; color:#fff; }
+    .cards .card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+
+    /* ---------- difference / advantages / table sections (if present) ---------- */
+    section{ padding: 36px 20px; }
+    .difference-section table { width:100%; border-collapse: collapse; background: #0b0b0b; color:#fff; }
+    .difference-section th, .difference-section td { padding:14px; border:1px solid rgba(255,255,255,0.04); text-align:center; }
+    .advantages ul { list-style:none; padding:0; color:var(--muted); }
+    .advantages ul li { margin:10px 0; padding-left:10px; position:relative; }
+    .advantages ul li::before { content: "✔"; position:absolute; left:-22px; color:var(--accent); }
+
+    /* ---------- footer ---------- */
+    .footer {
+      background: #000;
+      color: #ddd;
+      padding: 40px 24px;
+    }
+    .footer-container { display:flex; gap:24px; justify-content:space-between; flex-wrap:wrap; }
+    .footer-section { min-width:220px; flex:1; }
+    .footer-section h3{ color:var(--accent); margin-bottom:8px; }
+    .social-icons a{ color:#ddd; margin-right:12px; font-size:20px; text-decoration:none; }
+    .footer-bottom { text-align:center; margin-top:18px; color: #999; font-size:14px; border-top:1px solid rgba(255,255,255,0.03); padding-top:12px; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px){
+      .parent { flex-direction:column-reverse; padding:28px; }
+      .car-custom-video video{ height:260px; }
+      .hero-quote { min-height:60vh; padding-top:40px; }
+      .cards { gap:12px; padding:20px; }
+      .cards .card { width:100%; max-width:360px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- background video (replace path with your file) -->
+  <video class="back_video" autoplay muted loop playsinline>
+    <source src="./carvedio/background video 7.mp4" type="video/mp4">
+    <!-- If file missing a browser fallback will show blank background -->
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-left">
+      <a id="logo" href="#">logo</a>
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Gallery</a>
+      <a href="#">Customize</a>
+      <a href="#">Login</a>
+    </div>
+  </nav>
+
+  <!-- HERO / QUOTE -->
+  <header class="hero-quote" role="banner">
+    <h1 id="quote1">"Fuel the Passion. Drive the Future."</h1>
+    <h2 class="subquote">“Customize, Explore, and Showcase Your Dream Car.”</h2>
+
+    <div class="buttons" aria-hidden="false">
+      <a class="btn-cta" href="#">Start Customizing</a>
+      <a class="btn-cta" href="#">Explore Garage</a>
+    </div>
+  </header>
+
+  <!-- CAROUSEL HEADING -->
+  <section class="carousel-heading">
+    <h2 class="carousel-title">"Explore Iconic Machines"</h2>
+    <div class="sub-title">Take a 360° tour of legendary rides built for speed and passion.</div>
+  </section>
+
+  <!-- ROTATING BOX CAROUSEL -->
+  <section class="carousel" aria-hidden="false">
+    <div class="box">
+      <span style="--i:1"><img src="https://tse2.mm.bing.net/th/id/OIP.wGVME0Cb58MSmUQRL_aBTQHaEK?pid=Api&P=0&h=180" alt=""></span>
+      <span style="--i:2"><img src="https://tse2.mm.bing.net/th/id/OIP._VGFuQmtI26iLdtiEjtX8AHaE7?pid=Api&P=0&h=180" alt=""></span>
+      <span style="--i:3"><img src="https://tse2.mm.bing.net/th/id/OIP.TMFShV3L5W-OhUsSN8czJgHaEK?pid=Api&P=0&h=180" alt=""></span>
+      <span style="--i:4"><img src="https://tse4.mm.bing.net/th/id/OIP.T9v1q9dzmahlvrK5vNCg3AHaEo?pid=Api&P=0&h=180" alt=""></span>
+      <span style="--i:5"><img src="https://tse1.mm.bing.net/th/id/OIP.8lRFxO_bHs7Qy-nE0_LgxwHaEK?pid=Api&P=0&h=180" alt=""></span>
+      <span style="--i:6"><img src="https://tse1.mm.bing.net/th/id/OIP.MeFfqXzUT9cOAnf2IJcMKAHaEK?pid=Api&P=0&h=180" alt=""></span>
+      <span style="--i:7"><img src="https://tse4.mm.bing.net/th/id/OIP.h48ddGzzvI35oYdzrHdmBgHaEK?pid=Api&P=0&h=180" alt=""></span>
+      <span style="--i:8"><img src="https://tse2.mm.bing.net/th/id/OIP.GaoHDSRd4FTZWa0LcF5_aAHaFW?pid=Api&P=0&h=180" alt=""></span>
+    </div>
+  </section>
+
+  <!-- CUSTOMIZATION SECTION -->
+  <section class="parent">
+    <div class="child1">
+      <h1 id="heading">Transform Your Ride</h1>
+      <p>Watch cars come to life with stunning modifications. From wheels to wraps, unleash your creativity and design the car of your dreams.</p>
+      <p>Step into the future of car customization. Modify every detail in real time— from sleek colors to powerful wheels, and create a ride that turns heads.</p>
+
+      <ul>
+        <li>Choose custom colors</li>
+        <li>Swap wheels instantly</li>
+        <li>Set the perfect background</li>
+        <li>Save and share your build</li>
+      </ul>
+
+      <div id="start-modify"><a href="pract.html">Start Customizing</a></div>
+    </div>
+
+    <div class="child2">
+      <div class="car-custom-video" aria-hidden="false">
+        <video autoplay muted loop playsinline>
+          <source src="./carvedio/car custom.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="cards" aria-label="categories">
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2023/07/29/16/42/car-8157299_960_720.jpg" alt="Manual">
+      <div class="card-body">
+        <h5 class="card-title">Manual</h5>
+        <p class="card-text">Experience full control with a classic manual drive.</p>
+        <a class="btn btn-primary" href="./manual.html">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/1498842894/photo/electric-cars-charging-at-the-charging-station-and-with-a-wind-turbine-background-electric.jpg" alt="Electric">
+      <div class="card-body">
+        <h5 class="card-title">Electric</h5>
+        <p class="card-text">Drive into the future with clean electric power.</p>
+        <a class="btn btn-primary" href="electric1.html">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2023/01/24/10/30/gearstick-7740670_1280.jpg" alt="Automatic">
+      <div class="card-body">
+        <h5 class="card-title">Automatic</h5>
+        <p class="card-text">Enjoy effortless driving with smooth automatic shifts.</p>
+        <a class="btn btn-primary" href="automatic.html">Explore</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We create innovative car customization tools that make modifying cars fun, simple, and interactive.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: patolesweety@gmail.com</p>
+        <p>Phone: +91 7499850532</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/sweety-patole-a9ba29259/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2025 Car Customization Project — All Rights Reserved</div>
+  </footer>
+
+  <!-- Optional local script (keep it, your car.js can still be used) -->
+  <script type="module" src="./car.js"></script>
+
+  <!-- Bootstrap JS (optional, kept for your buttons) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+/* UNIVERSAL BACKGROUND */
+body {
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+/* Hero Section Background Video */
+.back_video {
+    top: 10px;
+    position: relative;
+    width: 100%;
+    height: 80vh; /* matches your HTML height:60% look */
+    object-fit: cover; 
+    display: block;
+}
+
+/* OPTIONAL: If you want video to stay behind text (like a true hero bg) */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Quote Section */
+.manual-quote {
+    text-align: center;
+    padding: 40px;
+}
+
+.manual-quote h2 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.manual-quote p {
+    font-size: 28px;
+    margin-top: -10px;
+}
+.manual_drive_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #333333;
+    color: white;
+    gap: 40px;
+}
+
+/* Text Section */
+.content_box {
+    width: 50%;
+}
+
+.content_box h1 {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.content_box p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Video Section */
+.video_box {
+    width: 50%;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video_box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Driving Section */
+.parent {
+    margin-top: 100px;
+    padding: 20px;
+    width: 600px;
+    background-color: #444;
+    border-radius: 10px;
+}
+
+#heading {
+    font-size: 40px;
+    text-align: center;
+}
+
+#para {
+    font-size: 22px;
+    padding: 20px;
+}
+
+/* Empty box instead of video */
+.asidevideo {
+    width: 730px;
+    height: 400px;
+    background-color: #555;
+    border-radius: 10px;
+    margin-left: 600px;
+    margin-top: -400px;
+}
+
+/* Mid-part */
+.mid-part {
+    padding: 50px;
+    text-align: center;
+}
+
+#heading_manual {
+    font-size: 45px;
+    font-weight: 800;
+}
+
+#heading_manual_para {
+    font-size: 22px;
+}
+.main_cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* space between video and text */
+    flex-wrap: wrap; /* makes it responsive on small screens */
+    margin: 50px 0;
+    background-color: #333; /* universal background */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.cat1 {
+    flex: 1 1 400px; /* grows but has a minimum width */
+    max-width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #000;
+}
+
+.cat1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cat1_description {
+    flex: 1 1 400px;
+    color: white;
+    max-width: 600px;
+    font-size: 18px;
+}
+
+.cat1_description h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cat1_description p {
+    line-height: 1.6;
+}
+
+
+/* Hatchback box (no video) */
+/* .cat1 {
+    height: 340px;
+    width: 500px;
+    background-color: #555;
+    border-radius: 10px;
+    margin-top: 50px;
+} */
+
+/* Description */
+/* .cat1_description {
+    height: 340px;
+    width: 750px;
+    background-color: #444;
+    margin-left: 580px;
+    margin-top: -370px;
+    padding: 20px;
+    border-radius: 10px;
+} */
+
+/* images for 3 card  */
+/* Cards backgrounds */
+.sedan-card {
+    background-image: url('mg\ hector.jpeg'); /* replace with your image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    height: 350px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional overlay for readability */
+.sedan-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); /* adjust darkness for text readability */
+}
+
+.sedan-content {
+    position: absolute; /* keep text above overlay */
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+/* SUV Card */
+.suv-card {
+    background-image: url('toyotahy2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    height: 350px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.suv-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.suv-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+/* Sports Card */
+.sports-card {
+    background-image: url('toyota-mirai.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    height: 350px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sports-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.sports-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+
+/* Cards (all same background) */
+.sedan-card,
+.suv-card,
+.sports-card,
+.offroad-card {
+    background-color: #444;
+    height: 350px;
+    border-radius: 12px;
+    margin-top: 100px;
+    padding: 25px;
+    position: relative;
+}
+
+/* Text inside cards */
+.sedan-content,
+.suv-content,
+.sports-content,
+.offroad-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Electric section */
+/* EV Sports Cards - paste into your CSS file */
+.ev-sports-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 28px;
+  letter-spacing: 0.4px;
+  color: #ffd54a; /* accent color */
+}
+
+/* Responsive grid */
+.ev-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+/* Card */
+.ev-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.15));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+
+/* Hover effect */
+.ev-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* Placeholder media area (empty image/video spot) */
+.ev-media {
+  height: 160px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* If you later add an <img> or <video>, make it cover */
+.ev-media img,
+.ev-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card content */
+.ev-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.ev-name {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.ev-stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.ev-stats li {
+  margin-bottom: 6px;
+}
+
+.ev-highlight {
+  margin-top: auto;
+  font-size: 0.95rem;
+  color: #f0e8d2;
+  opacity: 0.95;
+}
+
+/* Small screens: slightly smaller title and media */
+@media (max-width: 480px) {
+  .section-title { font-size: 1.6rem; }
+  .ev-media { height: 140px; }
+  .ev-card { min-height: 300px; }
+}
+
+/* Advantages section */
+.advantages {
+    padding: 60px;
+    text-align: center;
+    background-color: #333;
+}
+
+.adv-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.adv-card {
+    width: 220px;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 12px;
+}
+
+/* Why manual */
+.manual-adv {
+    width: 80%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #444;
+    border-radius: 12px;
+    text-align: center;
+}
+
+ul {
+    list-style: none; 
+    padding-left: 0; 
+}
+
+/* images /* EV Sports Section */
+.ev-sports-section {
+    padding: 50px 20px;
+    background-color: #111; /* universal dark background */
+    color: white;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+/* Cards container */
+.ev-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Card styles */
+.ev-card {
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.ev-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Optional overlay for better text visibility */
+.ev-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* Card content */
+.ev-body {
+    position: relative; /* above overlay */
+    padding: 20px;
+}
+
+.ev-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ev-stats {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+}
+
+.ev-stats li {
+    margin-bottom: 5px;
+}
+
+.ev-highlight {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Individual card background images  in sport electric section*/
+.ev-card:nth-child(1) {
+    background-image: url('tesla2.jpg');
+}
+
+.ev-card:nth-child(2) {
+    background-image: url('./porche.jpg');
+}
+
+.ev-card:nth-child(3) {
+    background-image: url('./audi.jpg');
+}
+
+.ev-card:nth-child(4) {
+    background-image: url('Rimac\ Nevera.jpeg');
+}
+ 
+
+
+.footer {
+    background: #111;
+    color: #eee;
+    padding: 90px 20px 60px;   /* BIG FOOTER */
+    box-shadow: 0 -10px 30px rgba(255, 76, 41, 0.12);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #ff4c29;
+    font-size: 22px;
+}
+
+.footer-section p {
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: #eee;
+    margin-right: 18px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4c29;
+    transform: scale(1.15);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+    padding-top: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+

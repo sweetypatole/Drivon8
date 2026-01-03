@@ -1,0 +1,482 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+  /* background-color: rgb(143, 40, 40); */
+}
+
+
+/* Navbar section */
+#navbar{
+  font-size: 20px;
+  height: 60px;
+  font-weight: 900;
+  background-color: transparent;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 2;
+
+}
+
+#navbar a{
+  /* background-color: black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration-line: none;
+  color: red;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px,0px,30px rgba(227,228,237,0.37);
+  border: 1.5px solid  rgba(255,255,255,0.18);;
+}
+
+#navbar a:hover{
+  color: #fff;
+}
+/* car vedio section */
+/* .car_vedio{
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+   iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+ }
+} */
+
+
+/* Drivon */
+/* .drivon{
+   padding-top:100px;
+   padding-left: 280px;
+   z-index: 1;
+}  */
+
+ /* .drivon h1{
+  font-size: 160px;
+  color:#fff;
+  background-color: transparent;
+  font-weight:600;  
+  padding-left: 100px;
+} 
+.drivon h1:hover{
+  -webkit-text-stroke: 2px #fff;
+  color: transparent; 
+}
+.drivon a{
+  padding-top: 1000px;
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  border: 2px solid white;
+  padding: 14px 70px;
+  border-radius: 50px;
+  margin-top: 20px ;
+}  
+.drivon a{
+  margin-left: 300px ;
+} */
+.back_video{
+  /* background-color: black; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   z-index: -1;
+   background-position: center;
+   /* transform: rotate( 360deg);
+  */
+}
+
+.quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  margin-top: 400px;
+  font-weight: 900;
+
+}
+.quote:hover{
+  color: red;
+}
+.subquote:hover{
+  color: red;
+}
+.subquote{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  background:black;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.carousel-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.carousel-title{
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+
+ .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  background: #111; 
+}
+
+.box{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100%{
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  -webkit-box-reflect:below 0px
+   linear-gradient(transparent,transparent, #0004)
+}
+
+.box span img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 18px;
+  height: 100%;
+  object-fit: cover;
+  
+} 
+
+.box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 18px;
+  object-fit: cover;
+  transition: transform 0.4s ease; /* Smooth zoom */
+}
+.box span:hover img{
+  transform: scale(1.2);
+  z-index: 10;
+
+}
+
+
+/* car customization section */
+
+ .car-cutomization{
+
+  padding-top: 100px;
+  
+}
+
+.car-custom-video{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 100px;
+  
+
+}
+
+.ccv{
+  position: absolute;
+  height: 550px;
+  width: 400px;     
+  object-fit: contain; 
+} 
+
+.description, p{
+  text-align: justify;
+  text-transform: initial;
+  font-size: 20px;
+  font-weight: 500;
+ 
+}
+#heading{
+  
+  font-size: 40px;
+  padding-left: 50px;
+  padding-top:0px;
+}
+
+
+ /* .parent{
+ 
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.child1{
+  background-color: red;
+}
+
+.child2{
+  background-color: green;
+  width: 500px;
+  height: 500px;
+  padding-top: 200px;
+}
+.child2.car-custom-video,video{
+  height: 100px;
+  height: 100px;
+  object-fit: cover;
+} */
+
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  height: 100vh; /* Full screen height */
+}
+
+.child1, .child2 {
+  flex: 1; /* Each takes 50% width */
+  padding: 40px;
+}
+
+.child1 {
+  background-color:black;
+  color: white;
+}
+
+.child2 {
+  background-color: rgb(14, 13, 13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-custom-video {
+  width: 100%;
+  height: 470px;
+  max-width: 600px;
+  aspect-ratio: 16 / 9; /* Keeps video proportion */
+}
+
+.car-custom-video video {
+  margin-top: -180px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* customizing button in ul-li */
+#start-modify{
+  margin-top: 52px;
+  margin-left: 40px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-decoration:none;
+
+}
+
+#start-modify button {
+  background-color: #ff6600;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#start-modify a{
+ padding: 12px 24px;
+ font-size: 20px;
+ font-weight: 500;
+ /* border: 2px white bold; */
+ text-decoration: none;
+ color: white;
+
+}
+#start-modify button:hover {
+  background-color: #e65500;
+}
+
+/* cards */
+
+.cards{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 400px;
+  /* background-color:#181817; */
+   background-color: #262626;
+   padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: #0f0f0f; /* same as footer theme */
+
+}
+
+.card-title{  
+  font-weight: 800;  
+}
+.card1{
+  margin-top: 50px;
+  border: 2px solid whitesmoke;
+}
+.card2{
+  margin-top: 50px;
+   border: 2px solid whitesmoke;
+}
+.card3{
+  margin-top: 50px;
+  border: 2px solid whitesmoke;
+}
+.card-body{
+  background-color: #fff;
+}
+
+.card1, .card2, .card3 {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* light shadow */
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* darker shadow on hover */
+  transform: scale(1.03); /* optional zoom */
+}
+
+
+.carousel-heading{
+  background-color: #262626;
+}
+.footer {
+    background: #111;
+    color: #eee;
+    padding: 90px 20px 60px;   /* BIG FOOTER */
+    box-shadow: 0 -10px 30px rgba(255, 76, 41, 0.12);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #ff4c29;
+    font-size: 22px;
+}
+
+.footer-section p {
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: #eee;
+    margin-right: 18px;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4c29;
+    transform: scale(1.15);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+    padding-top: 25px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */

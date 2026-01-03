@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DrivOn | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<!-- Background video -->
+<video autoplay loop muted playsinline class="login-video">
+    <source src="./carvedio/background video 7.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="login-container">
+    <h1>🚗 DrivOn</h1>
+    <p>Login to Customize Your Ride</p>
+
+    <form onsubmit="loginUser(event)">
+        <div class="input-box">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="input-box">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <p id="error-msg"></p>
+
+        <div class="links">
+            <a href="#">Forgot Password?</a>
+            <a href="#">Create Account</a>
+        </div>
+    </form>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
+
